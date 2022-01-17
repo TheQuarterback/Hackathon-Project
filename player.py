@@ -13,19 +13,15 @@
 
 class Player:
 
-    def __init__(self):
-        self.hand = []
-
-    # initialise hand 
-    def initialise_hand(self, given_hand):
-        self.hand =  given_hand
+    def __init__(self, given_hand):
+        self.hand = given_hand
 
     # remove card from hand, returns nothing
     def remove_card(hand, card):
         pass
     
     # add card to hand, returns nothing
-    def add_card(hand,card):
+    def add_card(hand, card):
         pass
 
     # play card to pile

@@ -15,14 +15,14 @@
 ### These are constants for all cards and the decks for the game. ###
 ### Do not delete ###
 
-from lib2to3.pgen2.token import GREATER
-
 
 ALL_COLOURS = "BGYPORM"
 ALL_NUM = "0123456789"
 PLUS_2 ="+2"
 PLUS_4 ="+4"
 WILDCARDS = [PLUS_2, PLUS_4]
+
+CARDS_IN_HAND = 8
 
 # review 
 
@@ -34,7 +34,14 @@ ORANGE_SUIT = ["O0","O1","O2","O3","O4","O5","O6","O7","O8","O9"]
 PURPLE_SUIT = ["P0","P1","P2","P3","P4","P5","P6","P7","P8","P9"]
 MAGENTA_SUIT = ["M0","M1","M2","M3","M4","M5","M6","M7","M8","M9"]
 
+SUIT_NUM = 7
+CARDS_IN_SUIT = 10
+
 INITIAL_DECK = [BLUE_SUIT, RED_SUIT,YELLOW_SUIT,GREEN_SUIT,ORANGE_SUIT,
                 PURPLE_SUIT,MAGENTA_SUIT]
 
 PLAY_DECK = INITIAL_DECK + WILDCARDS
+
+# card generation types
+DEAL = "Deal"
+PLAY = "Play"

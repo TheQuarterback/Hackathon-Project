@@ -14,6 +14,9 @@
 ##############################################################################
 ### Libraries used for the game. Additional libraries can be added ###
 import random
+from game import Game
+from player import Player
+from bot import Bot
 ##############################################################################
 
 ##############################################################################
@@ -151,3 +154,18 @@ WILDCARD_DECK = [PLUS_2, PLUS_4]
 # Here is where the Trois is played.
 
 ##############################################################################
+
+# initialise players and game
+player = Player(Game.deal_cards())
+bot1 = Bot(Game.deal_cards())
+bot2 = Bot(Game.deal_cards())
+bot3 = Bot(Game.deal_cards())
+
+play_order = [player,bot1,bot2,bot3]
+game = Game(play_order)
+
+# play game until winner decided
+while True:
+
+    # end the game if there is a winner 
+    pass
