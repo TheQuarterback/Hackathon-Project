@@ -15,7 +15,7 @@
 ### These are constants for all cards and the decks for the game. ###
 ### Do not delete ###
 
-
+# all cards in their raw form
 ALL_COLOURS = "BGYPORM"
 ALL_NUM = "0123456789"
 PLUS_2 ="+2"
@@ -24,8 +24,7 @@ WILDCARDS = [PLUS_2, PLUS_4]
 
 CARDS_IN_HAND = 8
 
-# review 
-
+# all card suits and the decks
 BLUE_SUIT = ["B0","B1","B2","B3","B4","B5","B6","B7","B8","B9"]
 RED_SUIT = ["R0","R1","R2","R3","R4","R5","R6","R7","R8","R9"]
 YELLOW_SUIT = ["Y0","Y1","Y2","Y3","Y4","Y5","Y6","Y7","Y8","Y9"]
@@ -45,3 +44,7 @@ PLAY_DECK = INITIAL_DECK + WILDCARDS
 # card generation types
 DEAL = "Deal"
 PLAY = "Play"
+
+# a flag to determine whether a card is playable or not
+PLAYABLE = 1
+NOT_PLAYABLE = 0
