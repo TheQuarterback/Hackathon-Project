@@ -155,17 +155,29 @@ WILDCARD_DECK = [PLUS_2, PLUS_4]
 
 ##############################################################################
 
-# initialise players and game
+# initialise players' hand and game
 player = Player(Game.deal_cards())
 bot1 = Bot(Game.deal_cards())
 bot2 = Bot(Game.deal_cards())
 bot3 = Bot(Game.deal_cards())
 
-play_order = [player,bot1,bot2,bot3]
+play_order = [player, bot1, bot2, bot3]
 game = Game(play_order)
+
+current_turn = 0
 
 # play game until winner decided
 while True:
 
-    # end the game if there is a winner 
-    pass
+    # play or pick up, and update hand
+
+    # end the game if there is a winner
+    # if hand is empty, declare winner 
+    game.check_winner() # needs modification
+
+    # move on to next player
+    if current_turn == 3:
+        current_turn = 0
+    else:
+        current_turn += 1
+    

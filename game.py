@@ -19,24 +19,25 @@ from random import randint
 class Game:
     
     # initialise wth a list in turn order
-    def __init__(self, turn_order: type[Player]):
+    def __init__(self, turn_order):
         self.turn_order = turn_order
 
         
     # give all players random hands the at start of the game
     @classmethod
-    def deal_cards(self):
+    def deal_cards(cls):
         hand = []
 
         for _ in range(CARDS_IN_HAND):
-            card = self.random_card()
+            card = cls.random_card(DEAL)
             hand.append(card)
 
         return hand
         
     
     # generates and returns a random card
-    def random_card(self, generate_type):
+    @classmethod
+    def random_card(cls, generate_type):
         # start of game
         if generate_type == DEAL:
             suit = INITIAL_DECK[randint(0, len(INITIAL_DECK) - 1)]
@@ -51,6 +52,8 @@ class Game:
 
     
     # checks if hand of current player is empty
-    def check_winner():
+    def check_winner(player: Player):
+        if not player.hand:
+            pass
         pass
 
