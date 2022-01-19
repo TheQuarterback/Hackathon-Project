@@ -35,6 +35,7 @@ class Player:
         # need to discuss about this
         pile = []
         pile.append(self.hand)
+        print("Pile: " + pile[-1])
         return
     
     # pick up a card from the deck
@@ -70,4 +71,4 @@ class Player:
         if self.hand[0] == top_pile[0] or self.hand[1] == top_pile[1]:
             return PLAYABLE
         else:
-            return NOT_PLAYABLE  
+            return NOT_PLAYABLE
