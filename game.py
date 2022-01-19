@@ -54,6 +54,7 @@ class Game:
     # checks if hand of current player is empty
     def check_winner(player: Player):
         if not player.hand:
+            # declare winner?
             pass
         pass
 
