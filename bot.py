@@ -20,4 +20,11 @@ class Bot(Player):
 
     # choose an optimal action and make the play
     def decide_play(self):
+        # check all cards on hand against the topmost card on the pile to 
+        # determine if there is/are any playable card(s). If no possible
+        # card(s), then take a random card from the deck
+
+        # store any possible playable card(s) in an array
+
+        # from the array, play the card(s) into the pile 
         pass
