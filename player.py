@@ -11,6 +11,10 @@
 # Date (dd/mm/yyyy) of Authorship delcaration for Wei Herng Moo Yong: 16/01/2022
 ##############################################################################
 
+from constants import INITIAL_DECK, PLAY_DECK, PLUS_2, PLUS_4, PLAY_DECK, \
+    PLAYABLE, NOT_PLAYABLE
+from random import randint
+
 class Player:
 
     def __init__(self, given_hand):
@@ -18,21 +22,52 @@ class Player:
 
     # remove card from hand, returns nothing
     def remove_card(hand, card):
-        pass
+        hand.remove(card)
+        return
     
     # add card to hand, returns nothing
     def add_card(hand, card):
-        pass
+        hand.append(card)
+        return
 
     # play card to pile
     def play_card(self):
-        pass
+        # need to discuss about this
+        pile = []
+        pile.append(self.hand)
+        return
     
-    # pick up a card from deck
+    # pick up a card from the deck
     def pick_card(self):
-        pass
+        suit = PLAY_DECK[randint(0, len(PLAY_DECK) - 1)]
+        card = suit[randint(0, len(suit) - 1)]
 
-    # check if card is playable
+        if card in INITIAL_DECK:
+            self.add_card(self.hand, card)
+        elif card == PLUS_2:
+            self.remove_card(self.hand, card)
+            for i in range(1):
+                new_suit = PLAY_DECK[randint(0, len(PLAY_DECK) - 1)]
+                new_card = suit[randint(0, len(new_suit) - 1)]
+                if new_card == PLUS_2 or new_card == PLUS_4:
+                    self.remove_card(self.hand, new_card)
+                else:
+                    self.add_card(self.hand, new_card)
+        elif card == PLUS_4:
+            self.remove_card(self.hand, card)
+            for i in range(3):
+                new_suit = PLAY_DECK[randint(0, len(PLAY_DECK) - 1)]
+                new_card = suit[randint(0, len(new_suit) - 1)]
+                if new_card == PLUS_2 or new_card == PLUS_4:
+                    self.remove_card(self.hand, new_card)
+                else:
+                    self.add_card(self.hand, new_card)
+        return
+
+    # check if card is playable - returns 1 if playable and 0 otherwise
     def check_playable(self, top_pile):
-        pass
-    
+        # need to discuss about this
+        if self.hand[0] == top_pile[0] or self.hand[1] == top_pile[1]:
+            return PLAYABLE
+        else:
+            return NOT_PLAYABLE  
