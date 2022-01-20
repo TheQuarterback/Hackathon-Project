@@ -12,6 +12,7 @@
 ##############################################################################
 import game
 from player import Player
+from constants import PLAYABLE, NOT_PLAYABLE
 
 class Bot(Player):
 
@@ -25,14 +26,14 @@ class Bot(Player):
         # determine if there is/are any playable card(s), and store any 
         # possible playable card(s) in an array
         for i in range(len(self.hand) - 1):
-            if Player.check_playable() == 1:
+            if Player.check_playable() == PLAYABLE:
                 playable_cards.append(self.hand[i])
         
         playable_cards_num = len(playable_cards)
         
         # if there are no playable card(s), then take a random card from 
         # the deck. Otherwise, play the card(s) into the pile from the array
-        if playable_cards_num == 0:
+        if playable_cards_num == NOT_PLAYABLE:
             self.pick_card()
         else:
             for _ in range(playable_cards_num - 1):
