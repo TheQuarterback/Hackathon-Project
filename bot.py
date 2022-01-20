@@ -10,7 +10,7 @@
 # Date (dd/mm/yyyy) of Authorship delcaration for Anthony Lua: 14/01/2022
 # Date (dd/mm/yyyy) of Authorship delcaration for Wei Herng Moo Yong: 16/01/2022
 ##############################################################################
-
+import game
 from player import Player
 
 class Bot(Player):
