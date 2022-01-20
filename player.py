@@ -47,7 +47,7 @@ class Player:
             self.add_card(self.hand, card)
         elif card == PLUS_2:
             self.remove_card(self.hand, card)
-            for i in range(1):
+            for _ in range(1):
                 new_suit = PLAY_DECK[randint(0, len(PLAY_DECK) - 1)]
                 new_card = suit[randint(0, len(new_suit) - 1)]
                 if new_card == PLUS_2 or new_card == PLUS_4:
@@ -56,7 +56,7 @@ class Player:
                     self.add_card(self.hand, new_card)
         elif card == PLUS_4:
             self.remove_card(self.hand, card)
-            for i in range(3):
+            for _ in range(3):
                 new_suit = PLAY_DECK[randint(0, len(PLAY_DECK) - 1)]
                 new_card = suit[randint(0, len(new_suit) - 1)]
                 if new_card == PLUS_2 or new_card == PLUS_4:
