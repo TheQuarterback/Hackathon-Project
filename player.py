@@ -66,9 +66,9 @@ class Player:
         return
 
     # check if card is playable - returns 1 if playable and 0 otherwise
-    def check_playable(self, top_pile):
+    def check_playable(self, top_pile, current_card):
         # need to discuss about this
-        if self.hand[0] == top_pile[0] or self.hand[1] == top_pile[1]:
+        if top_pile[0] == current_card[0] or top_pile[1] == current_card[1]:
             return PLAYABLE
         else:
             return NOT_PLAYABLE
