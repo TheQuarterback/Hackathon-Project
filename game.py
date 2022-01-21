@@ -19,8 +19,9 @@ from random import randint
 class Game:
     
     # initialise wth a list in turn order
-    def __init__(self, turn_order):
-        self.turn_order = turn_order
+    def __init__(self, play_order):
+        self.play_order = play_order
+        self.top_pile = Game.random_card(DEAL)
 
         
     # give all players random hands the at start of the game
@@ -52,9 +53,9 @@ class Game:
 
     
     # checks if hand of current player is empty
+    # declares winner if empty
     def check_winner(player: Player):
         if not player.hand:
             print("WINNER!!!")
-            pass
-        pass
+
 
