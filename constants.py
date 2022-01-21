@@ -46,5 +46,5 @@ DEAL = "Deal"
 PLAY = "Play"
 
 # a flag to determine whether a card is playable or not playable
-PLAYABLE = True
-NOT_PLAYABLE = False
+PLAYABLE = 1
+NOT_PLAYABLE = 0
