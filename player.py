@@ -15,6 +15,8 @@ from constants import INITIAL_DECK, PLAY_DECK, PLUS_2, PLUS_4, PLAY_DECK, \
     PLAYABLE, NOT_PLAYABLE
 from random import randint
 
+from game import Game
+
 class Player:
 
     def __init__(self, given_hand):
@@ -23,20 +25,16 @@ class Player:
     # remove card from hand, returns nothing
     def remove_card(hand, card):
         hand.remove(card)
-        return
+
     
     # add card to hand, returns nothing
     def add_card(hand, card):
         hand.append(card)
-        return
 
-    # play card to pile
-    def play_card(self):
-        # need to discuss about this
-        pile = []
-        pile.append(self.hand)
-        print("Pile: " + pile[-1])
-        return
+
+    # play a card
+    def play_card(game: Game, card):
+        game.top_pile = card
     
     # pick up a card from the deck
     def pick_card(self):
@@ -68,7 +66,8 @@ class Player:
     # check if card is playable - returns 1 if playable and 0 otherwise
     def check_playable(self, top_pile, current_card):
         # need to discuss about this
-        if top_pile[0] == current_card[0] or top_pile[1] == current_card[1]:
+        if top_pile[0] == current_card[0] or top_pile[1] == current_card[1] and \
+            len(current_card) == 2:
             return PLAYABLE
         else:
             return NOT_PLAYABLE
