@@ -10,8 +10,8 @@
 # Date (dd/mm/yyyy) of Authorship delcaration for Anthony Lua: 14/01/2022
 # Date (dd/mm/yyyy) of Authorship delcaration for Wei Herng Moo Yong: 16/01/2022
 ##############################################################################
-from game import Game
 from player import Player
+from game import Game
 from constants import PLAYABLE, NOT_PLAYABLE
 
 class Bot(Player):
@@ -22,11 +22,12 @@ class Bot(Player):
     # choose an optimal action and make the play
     def decide_play(self):
         playable_cards = []
+        topmost_card = Game.top_pile
         # check all cards on hand against the topmost card on the pile to 
         # determine if there is/are any playable card(s), and store any 
         # possible playable card(s) in an array
         for i in range(len(self.hand) - 1):
-            if Player.check_playable() == PLAYABLE:
+            if self.check_playable(topmost_card, self.hand[i]) == PLAYABLE:
                 playable_cards.append(self.hand[i])
         
         playable_cards_num = len(playable_cards)
@@ -36,6 +37,6 @@ class Bot(Player):
         if playable_cards_num == NOT_PLAYABLE:
             self.pick_card()
         else:
-            for _ in range(playable_cards_num - 1):
-                self.play_card()
+            for j in range(playable_cards_num - 1):
+                self.play_card(playable_cards[j])
         return
