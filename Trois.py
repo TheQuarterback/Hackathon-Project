@@ -13,10 +13,11 @@
 
 ##############################################################################
 ### Libraries used for the game. Additional libraries can be added ###
-import random
+
 from game import Game
 from player import Player
 from bot import Bot
+
 ##############################################################################
 
 ##############################################################################
@@ -40,12 +41,16 @@ bot2 = Bot(Game.deal_cards())
 bot3 = Bot(Game.deal_cards())
 
 play_order = [player, bot1, bot2, bot3]
-game = Game(play_order)
+
+game = Game(play_order, 10) # initialize game with play order and duration
 
 current_turn = 0
 
+game.start_timer()
+
+
 # play game until winner decided
-while True:
+while game.time_left > 0:
 
     # current player
     player = game.play_order[current_turn]
@@ -62,18 +67,19 @@ while True:
 
         for card in play_to_make:
             if player.check_playable(game.top_pile, card):
-                player.play_card(game, card)
+                game.top_pile = card
     # bot's turn
     else:
         player.decide_play()
 
 
-    # if hand is empty, declare winner 
-    game.check_winner(player) # needs modification
-
+    # if hand is empty, declare winner and exit loop
+    game.check_winner(player)
+ 
     # move on to next player
     if current_turn == 3:
         current_turn = 0
     else:
         current_turn += 1
+
     
