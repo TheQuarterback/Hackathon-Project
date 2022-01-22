@@ -10,18 +10,37 @@
 # Date (dd/mm/yyyy) of Authorship delcaration for Anthony Lua: 14/01/2022
 # Date (dd/mm/yyyy) of Authorship delcaration for Wei Herng Moo Yong: 16/01/2022
 ##############################################################################
-from player import Player
-from constants import CARDS_IN_HAND, INITIAL_DECK, CARDS_IN_SUIT, SUIT_NUM, \
+
+from time import sleep
+from sys import exit
+import threading
+from constants import CARDS_IN_HAND, INITIAL_DECK,  \
     CARDS_IN_HAND,  PLAY_DECK, DEAL, PLAY
-import bot
 from random import randint
+from player import Player
 
 class Game:
     
     # initialise wth a list in turn order
-    def __init__(self, play_order):
+    def __init__(self, play_order, time_limit = 10):
         self.play_order = play_order
         self.top_pile = Game.random_card(DEAL)
+        self.time_left = time_limit
+
+    # start timer
+    def start_timer(self):
+        self.countdown = threading.Thread(target = self.time_limit)
+        self.countdown.start()
+
+    # timer  
+    def time_limit(self):
+
+        for t in range(self.time_left):
+            self.time_left -= 1
+            sleep(1)
+
+        print("\nTIME IS UP!!!\n")
+        exit()
 
         
     # give all players random hands the at start of the game
@@ -36,7 +55,7 @@ class Game:
         return hand
         
     
-    # generates and returns a random card
+    # generates and returns a random card, talk about this in meeting
     @classmethod
     def random_card(cls, generate_type):
         # start of game
@@ -54,8 +73,10 @@ class Game:
     
     # checks if hand of current player is empty
     # declares winner if empty
-    def check_winner(player: Player):
+    def check_winner(self, player: Player):
         if not player.hand:
             print("WINNER!!!")
+            exit() # end the program
+
 
 
