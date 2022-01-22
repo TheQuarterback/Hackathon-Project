@@ -15,7 +15,6 @@ from constants import INITIAL_DECK, PLAY_DECK, PLUS_2, PLUS_4, PLAY_DECK, \
     PLAYABLE, NOT_PLAYABLE
 from random import randint
 
-from game import Game
 
 class Player:
 
@@ -30,11 +29,6 @@ class Player:
     # add card to hand, returns nothing
     def add_card(hand, card):
         hand.append(card)
-
-
-    # play a card
-    def play_card(game: Game, card):
-        game.top_pile = card
     
     # pick up a card from the deck
     def pick_card(self):
