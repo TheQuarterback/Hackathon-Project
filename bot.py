@@ -10,14 +10,12 @@
 # Date (dd/mm/yyyy) of Authorship delcaration for Anthony Lua: 14/01/2022
 # Date (dd/mm/yyyy) of Authorship delcaration for Wei Herng Moo Yong: 16/01/2022
 ##############################################################################
+
 from player import Player
 from game import Game
 from constants import PLAYABLE, NOT_PLAYABLE
 
 class Bot(Player):
-
-    def __init__(self):
-        super().__init__()
 
     # choose an optimal action and make the play
     def decide_play(self):
