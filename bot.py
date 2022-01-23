@@ -12,20 +12,18 @@
 ##############################################################################
 
 from player import Player
-from game import Game
 from constants import PLAYABLE, NOT_PLAYABLE
 
 class Bot(Player):
 
     # choose an optimal action and make the play
-    def decide_play(self):
+    def decide_play(self, top_pile):
         playable_cards = []
-        topmost_card = Game.top_pile
         # check all cards on hand against the topmost card on the pile to 
         # determine if there is/are any playable card(s), and store any 
         # possible playable card(s) in an array
         for i in range(len(self.hand) - 1):
-            if self.check_playable(topmost_card, self.hand[i]) == PLAYABLE:
+            if self.check_playable(top_pile, self.hand[i]) == PLAYABLE:
                 playable_cards.append(self.hand[i])
         
         playable_cards_num = len(playable_cards)
@@ -36,5 +34,5 @@ class Bot(Player):
             self.pick_card()
         else:
             for j in range(playable_cards_num - 1):
-                self.play_card(playable_cards[j])
+                top_pile = playable_cards[j]
         return
