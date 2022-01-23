@@ -11,10 +11,10 @@
 # Date (dd/mm/yyyy) of Authorship delcaration for Wei Herng Moo Yong: 16/01/2022
 ##############################################################################
 
+from game import Game
 from constants import INITIAL_DECK, PLAY_DECK, PLUS_2, PLUS_4, PLAY_DECK, \
-    PLAYABLE, NOT_PLAYABLE
+    PLAYABLE, NOT_PLAYABLE, DEAL, PLAY
 from random import randint
-
 
 class Player:
 
@@ -24,7 +24,6 @@ class Player:
     # remove card from hand, returns nothing
     def remove_card(hand, card):
         hand.remove(card)
-
     
     # add card to hand, returns nothing
     def add_card(hand, card):
@@ -32,16 +31,14 @@ class Player:
     
     # pick up a card from the deck
     def pick_card(self):
-        suit = PLAY_DECK[randint(0, len(PLAY_DECK) - 1)]
-        card = suit[randint(0, len(suit) - 1)]
+        card = Game.random_card(PLAY)
 
         if card in INITIAL_DECK:
             self.add_card(self.hand, card)
         elif card == PLUS_2:
             self.remove_card(self.hand, card)
             for _ in range(1):
-                new_suit = PLAY_DECK[randint(0, len(PLAY_DECK) - 1)]
-                new_card = suit[randint(0, len(new_suit) - 1)]
+                new_card = Game.random_card(PLAY)
                 if new_card == PLUS_2 or new_card == PLUS_4:
                     self.remove_card(self.hand, new_card)
                 else:
@@ -49,8 +46,7 @@ class Player:
         elif card == PLUS_4:
             self.remove_card(self.hand, card)
             for _ in range(3):
-                new_suit = PLAY_DECK[randint(0, len(PLAY_DECK) - 1)]
-                new_card = suit[randint(0, len(new_suit) - 1)]
+                new_card = Game.random_card(PLAY)
                 if new_card == PLUS_2 or new_card == PLUS_4:
                     self.remove_card(self.hand, new_card)
                 else:
