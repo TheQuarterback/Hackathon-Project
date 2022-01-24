@@ -11,7 +11,7 @@
 # Date (dd/mm/yyyy) of Authorship delcaration for Wei Herng Moo Yong: 16/01/2022
 ##############################################################################
 
-from game import Game
+import game
 from constants import INITIAL_DECK, PLAY_DECK, PLUS_2, PLUS_4, PLAY_DECK, \
     PLAYABLE, NOT_PLAYABLE, DEAL, PLAY
 
@@ -21,8 +21,8 @@ class Player:
         self.hand = given_hand
 
     # remove card from hand, returns nothing
-    def remove_card(hand, card):
-        hand.remove(card)
+    def remove_card(self, card):
+        self.hand.remove(card)
     
     # add card to hand, returns nothing
     def add_card(hand, card):
@@ -30,14 +30,14 @@ class Player:
     
     # pick up a card from the deck
     def pick_card(self):
-        card = Game.random_card(PLAY)
+        card = game.Game.random_card(PLAY)
 
         if card in INITIAL_DECK:
             self.add_card(self.hand, card)
         elif card == PLUS_2:
             self.remove_card(self.hand, card)
             for _ in range(1):
-                new_card = Game.random_card(PLAY)
+                new_card = game.Game.random_card(PLAY)
                 if new_card == PLUS_2 or new_card == PLUS_4:
                     self.remove_card(self.hand, new_card)
                 else:
@@ -45,7 +45,7 @@ class Player:
         elif card == PLUS_4:
             self.remove_card(self.hand, card)
             for _ in range(3):
-                new_card = Game.random_card(PLAY)
+                new_card = game.Game.random_card(PLAY)
                 if new_card == PLUS_2 or new_card == PLUS_4:
                     self.remove_card(self.hand, new_card)
                 else:
@@ -55,8 +55,8 @@ class Player:
     # check if card is playable - returns 1 if playable and 0 otherwise
     def check_playable(self, top_pile, current_card):
         # need to discuss about this
-        if top_pile[0] == current_card[0] or top_pile[1] == current_card[1] and \
-            len(current_card) == 2:
+        if len(current_card) == 2 and (top_pile[0] == current_card[0] or \
+            top_pile[1] == current_card[1]):
             return PLAYABLE
         else:
             return NOT_PLAYABLE
