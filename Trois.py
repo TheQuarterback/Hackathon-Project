@@ -13,9 +13,9 @@
 
 ##############################################################################
 ### Libraries used for the game. Additional libraries can be added ###
-
-from game import Game
 from player import Player
+from game import Game
+from time import sleep
 from bot import Bot
 
 ##############################################################################
@@ -42,7 +42,7 @@ bot3 = Bot(Game.deal_cards())
 
 play_order = [player, bot1, bot2, bot3]
 
-game = Game(play_order, 10) # initialize game with play order and duration
+game = Game(play_order, 50) # initialize game with play order and duration
 
 current_turn = 0
 
@@ -68,9 +68,11 @@ while game.time_left > 0:
         for card in play_to_make:
             if player.check_playable(game.top_pile, card):
                 game.top_pile = card
+                player.remove_card(card)
     # bot's turn
     else:
-        player.decide_play()
+        sleep(3)
+        player.decide_play(game.top_pile)
 
 
     # if hand is empty, declare winner and exit loop
