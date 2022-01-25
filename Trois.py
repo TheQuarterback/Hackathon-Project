@@ -31,8 +31,18 @@ from bot import Bot
 
 ##############################################################################
 # Here is where the Trois is played.
-
 ##############################################################################
+# start thegame with simple introductory proses and courtesy
+print("Welcome to Trois! A lovely and great game for bored people!\n")
+print("If this is your first time playing Trois, we recommend reading the",
+      "game brochure before starting!\n")
+player_name = str(input("Enter your name/username: "))
+print("\n")
+print("Greetings, " + player_name + "!\n")
+print("Bot 1, Bot 2, Bot 3 has joined the game\n")
+print("Dealer has shuffled and distributed the cards to all players\n")
+print("Dealer has formed the deck\n")
+print("Dealer has formed a pile\n")
 
 # initialise players' hand and game
 player = Player(Game.deal_cards())
@@ -83,5 +93,3 @@ while game.time_left > 0:
         current_turn = 0
     else:
         current_turn += 1
-
-    
