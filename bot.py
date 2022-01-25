@@ -33,6 +33,7 @@ class Bot(Player):
         if playable_cards_num == NOT_PLAYABLE:
             self.pick_card()
         else:
+            top_pile = playable_cards[-1]
             for j in range(playable_cards_num - 1):
-                top_pile = playable_cards[j]
+                self.remove_card(playable_cards[j])
         return

@@ -35,11 +35,11 @@ class Player:
         if card in INITIAL_DECK:
             self.add_card(self.hand, card)
         elif card == PLUS_2:
-            self.remove_card(self.hand, card)
+            self.remove_card(card)
             for _ in range(1):
                 new_card = game.Game.random_card(PLAY)
                 if new_card == PLUS_2 or new_card == PLUS_4:
-                    self.remove_card(self.hand, new_card)
+                    self.remove_card(new_card)
                 else:
                     self.add_card(self.hand, new_card)
         elif card == PLUS_4:
@@ -47,7 +47,7 @@ class Player:
             for _ in range(3):
                 new_card = game.Game.random_card(PLAY)
                 if new_card == PLUS_2 or new_card == PLUS_4:
-                    self.remove_card(self.hand, new_card)
+                    self.remove_card(new_card)
                 else:
                     self.add_card(self.hand, new_card)
         return
