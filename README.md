@@ -47,18 +47,18 @@ Rules:
 - Example of same-number combination if the topmost card on the pile is blue (B7): [G7, P7], [O7]
 
 All game cards:
-Blue: B0, B1, B2, B3, B4, B5, B6, B7, B8, B9
+- Blue: B0, B1, B2, B3, B4, B5, B6, B7, B8, B9
 
-Green: G0, G1, G2, G3, G4, G5, G6, G7, G8, G9
+- Green: G0, G1, G2, G3, G4, G5, G6, G7, G8, G9
 
-Yellow: Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9
+- Yellow: Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9
 
-Purple: P0, P1, P2, P3, P4, P5, P6, P7, P8, P9
+- Purple: P0, P1, P2, P3, P4, P5, P6, P7, P8, P9
 
-Orange: O0, O1, O2, O3, O4, O5, O6, O7, O8, O9
+- Orange: O0, O1, O2, O3, O4, O5, O6, O7, O8, O9
 
-Red: R0, R1, R2, R3, R4, R5, R6, R7, R8, R9
+- Red: R0, R1, R2, R3, R4, R5, R6, R7, R8, R9
 
-Magenta: M0, M1, M2, M3, M4, M5, M6, M7, M8, M9
+- Magenta: M0, M1, M2, M3, M4, M5, M6, M7, M8, M9
 
-Wildcards: +2, +4
+- Wildcards: +2, +4
