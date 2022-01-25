@@ -2,19 +2,12 @@
 
 About:
 1. It is a slightly different version of Uno:
-
 - There are more card combinations
-
 - Wildcards work slightly differently
-
 2. It is great for bored people to play
-
 3. One human player plays against three bots
-
 4. The game ends when a character wins by either of the following:
-
 - Having the least number of cards after the time limit (25 minutes) - If two or more characters have the same least number of cards, a tie will be announced
-
 - Having no cards left on hand
 
 Characters in the game:
