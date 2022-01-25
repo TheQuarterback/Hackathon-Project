@@ -1,4 +1,4 @@
-# Hackathon-Project
+# Hackathon-Project - Trois
 
 About:
 1. It is a slightly different version of Uno:
@@ -10,12 +10,14 @@ About:
 - Having the least number of cards after the time limit (25 minutes) - If two or more characters have the same least number of cards, a tie will be announced
 - Having no cards left on hand
 
+
 Characters in the game:
 1. Player (Human)
 2. Bot 1
 3. Bot 2
 4. Bot 3
 5. Dealer - Does not play the game (Game engine)
+
 
 Terminology:
 1. Character: A player in the game whether it is human or a bot
@@ -25,10 +27,12 @@ Terminology:
 5. Pile: These are cards facing upwards
 6. Wildcard pile: This is where wildcards are discarded
 
+
 Play progression:
 1. The dealer opens by taking handing eight random cards (excluding wildcards) from the deck to each character
 2. The dealer then takes a card from the deck and place the card facing upwards to create a pile
 3. Afterwards, Player and the bots will play the game until one character wins
+
 
 Rules:
 1. Player always start the game
