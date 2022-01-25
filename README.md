@@ -2,7 +2,9 @@
 
 About:
 1. It is a slightly different version of Uno:
+
 1a. There are more card combinations
+
 1b. Wildcards work slightly differently
 
 2. It is great for bored people to play
