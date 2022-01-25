@@ -13,20 +13,12 @@
 
 ##############################################################################
 ### Libraries used for the game. Additional libraries can be added ###
+
 from player import Player
 from game import Game
 from time import sleep
 from bot import Bot
 
-##############################################################################
-
-##############################################################################
-### These are constants for all cards and the decks for the game. ###
-### Do not delete ###
-
-### Any additional constant(s) can be added below here ### - This comment should be deleted before submission
-
-### End of constants ###
 ##############################################################################
 
 ##############################################################################
