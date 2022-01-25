@@ -37,35 +37,21 @@ Rules:
 4. The time limit is 25 minutes
 5. No wildcards can be given at the start of the game
 6. Wildcards can only be obtained from the deck and the character who gets the wildcard must:
-Take two additional cards from the deck if the wildcard is a +2:
-If there is/are any of the additional wildcard(s), it will be discarded into the wildcard pile
-Take four additional cards from the deck if the wildcard is a +4:
-If there is/are any of the additional wildcard(s), it will be discarded into the wildcard pile
-Wildcards are to be discarded into the wildcard pile immediately after obtaining them
-In a play, a character can place card(s) from their hand onto the pile if they match the topmost card on the pile:
-If there is not a single card that can be discarded from their hand onto the pile, they will have to take a card from the deck and then it will be the next character’s turn
-Matching card(s) is/are of the same colour or number:
-Example of same-colour combination if the topmost card on the pile is blue (B7):
-[B0, B3, B8]
-[B6]
-Example of same-number combination if the topmost card on the pile is blue (B7):
-[G7, P7]
-[O7]
+- Take two additional cards from the deck if the wildcard is a +2
+- Take four additional cards from the deck if the wildcard is a +4
+7. Wildcards are to be discarded into the wildcard pile immediately after obtaining them
+8. In a play, a character can place card(s) from their hand onto the pile if they match the topmost card on the pile:
+- If there is not a single card that can be discarded from their hand onto the pile, they will have to take a card from the deck and then it will be the next character’s turn
+9. Matching card(s) is/are of the same colour or number:
+- Example of same-colour combination if the topmost card on the pile is blue (B7): [B0, B3, B8], [B6]
+- Example of same-number combination if the topmost card on the pile is blue (B7): [G7, P7], [O7]
 
 All game cards:
-Blue:
-B0, B1, B2, B3, B4, B5, B6, B7, B8, B9
-Green:
-G0, G1, G2, G3, G4, G5, G6, G7, G8, G9
-Yellow:
-Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9
-Purple:
-P0, P1, P2, P3, P4, P5, P6, P7, P8, P9
-Orange:
-O0, O1, O2, O3, O4, O5, O6, O7, O8, O9
-Red:
-R0, R1, R2, R3, R4, R5, R6, R7, R8, R9
-Magenta:
-M0, M1, M2, M3, M4, M5, M6, M7, M8, M9
-Wildcards:
-+2, +4
+Blue: B0, B1, B2, B3, B4, B5, B6, B7, B8, B9
+Green: G0, G1, G2, G3, G4, G5, G6, G7, G8, G9
+Yellow: Y0, Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9
+Purple: P0, P1, P2, P3, P4, P5, P6, P7, P8, P9
+Orange: O0, O1, O2, O3, O4, O5, O6, O7, O8, O9
+Red: R0, R1, R2, R3, R4, R5, R6, R7, R8, R9
+Magenta: M0, M1, M2, M3, M4, M5, M6, M7, M8, M9
+Wildcards: +2, +4
