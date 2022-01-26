@@ -19,10 +19,13 @@ class Bot(Player):
     # choose an optimal action and make the play
     def decide_play(self, top_pile):
         playable_cards_num = 0
+        
+        
         # check all cards on hand against the topmost card on the pile to 
         # determine if there is/are any playable card(s), and store any 
         # possible playable card(s) in an array
-        for i in range(len(self.hand) - 1):
+        for i in range(len(self.hand)-1):
+         
             if self.check_playable(top_pile, self.hand[i]) == PLAYABLE:
                 playable_cards_num += 1
                 top_pile = self.hand[i]
