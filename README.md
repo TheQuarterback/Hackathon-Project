@@ -1,4 +1,4 @@
-# Hackathon-Project - Trois
+# Hackathon-Project by Team MelbGridiron (Trois)
 
 About:
 1. It is a slightly different version of Uno:
