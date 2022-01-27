@@ -38,7 +38,10 @@ class Bot(Player):
             top_pile = playable_cards[-1]
             print(top_pile) # for testing - to be deleted later
             for j in range(playable_cards_num - 1):
+                print(playable_cards[j] + " ")
                 self.remove_card(playable_cards[j])
+            print("\n")
         else:
             self.pick_card()
-        return
+
+        return top_pile
