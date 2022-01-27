@@ -74,7 +74,7 @@ while game.time_left > 0:
     # bot's turn
     else:
         sleep(3)
-        player.decide_play(game.top_pile)
+        game.top_pile = player.decide_play(game.top_pile)
 
 
     # if hand is empty, declare winner and exit loop
