@@ -25,15 +25,15 @@ class Player:
         self.hand.remove(card)
     
     # add card to hand, returns nothing
-    def add_card(hand, card):
-        hand.append(card)
+    def add_card(self, card):
+        self.hand.append(card)
     
     # pick up a card from the deck
     def pick_card(self):
         card = game.Game.random_card(PLAY)
 
         if card in INITIAL_DECK:
-            self.add_card(self.hand, card)
+            self.add_card(card)
         elif card == PLUS_2:
             self.remove_card(card)
             for _ in range(1):
@@ -41,7 +41,7 @@ class Player:
                 if new_card == PLUS_2 or new_card == PLUS_4:
                     self.remove_card(new_card)
                 else:
-                    self.add_card(self.hand, new_card)
+                    self.add_card(new_card)
         elif card == PLUS_4:
             self.remove_card(self.hand, card)
             for _ in range(3):
@@ -49,7 +49,7 @@ class Player:
                 if new_card == PLUS_2 or new_card == PLUS_4:
                     self.remove_card(new_card)
                 else:
-                    self.add_card(self.hand, new_card)
+                    self.add_card(new_card)
         return
 
     # check if card is playable - returns 1 if playable and 0 otherwise

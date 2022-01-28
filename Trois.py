@@ -14,10 +14,12 @@
 ##############################################################################
 ### Libraries used for the game. Additional libraries can be added ###
 
+from constants import PLAY
 from player import Player
 from game import Game
 from time import sleep
 from bot import Bot
+import sys
 
 ##############################################################################
 
@@ -26,18 +28,23 @@ from bot import Bot
 ##############################################################################
 # start thegame with simple introductory proses and courtesy
 print("Welcome to Trois! A lovely and great game for bored people!\n")
+sleep(1)
 print("If this is your first time playing Trois, we recommend reading the",
       "game brochure before starting!\n")
+sleep(1)
 player_name = str(input("Enter your name/username: "))
-print("\n")
-print("Greetings, " + player_name + "!\n")
+print("\nGreetings, " + player_name + "!\n")
 print("Bot 1, Bot 2, Bot 3 has joined the game\n")
+sleep(1)
 print("Dealer has shuffled and distributed the cards to all players\n")
+sleep(1)
 print("Dealer has formed the deck\n")
+sleep(1)
 print("Dealer has formed a pile\n")
+sleep(1)
 
 # initialise players' hand and game
-player = Player(Game.deal_cards())
+player = Player([])
 bot1 = Bot(Game.deal_cards())
 bot2 = Bot(Game.deal_cards())
 bot3 = Bot(Game.deal_cards())
@@ -67,21 +74,34 @@ while game.time_left > 0:
         play_to_make = input("Enter card(s) to play: ")
         play_to_make = play_to_make.split()
 
+        # check if cards are playable
+        cards_to_remove = []
         for card in play_to_make:
             if player.check_playable(game.top_pile, card):
-                game.top_pile = card
-                player.remove_card(card)
+                cards_to_remove.append(card)
+
+        # no cards to play
+        if not cards_to_remove:
+            player.pick_card()  
+        # update top pile card
+        else:
+            game.top_pile = cards_to_remove[-1]
+
+        # remove cards
+        player.hand = [card for card in player.hand if card not in cards_to_remove]
     # bot's turn
     else:
-        sleep(3)
+        sleep(2)
         game.top_pile = player.decide_play(game.top_pile)
 
 
     # if hand is empty, declare winner and exit loop
-    game.check_winner(player)
+    if game.check_winner(player):
+        break
  
     # move on to next player
     if current_turn == 3:
         current_turn = 0
     else:
         current_turn += 1
+

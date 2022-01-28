@@ -29,16 +29,16 @@ class Bot(Player):
                 playable_cards.append(self.hand[i])
         
         # for testing - to be deleted later
-        for k in range(playable_cards_num - 1):
-            print(playable_cards[k])
+        #for k in range(playable_cards_num - 1):
+         #   print(playable_cards[k])
         
         # if there are no playable card(s), then take a random card from 
         # the deck. Otherwise, play the card(s) into the pile from the array
         if playable_cards_num >= PLAYABLE:
             top_pile = playable_cards[-1]
-            print(top_pile) # for testing - to be deleted later
+            #print(top_pile) # for testing - to be deleted later
             for j in range(playable_cards_num - 1):
-                print(playable_cards[j] + " ")
+                #print(playable_cards[j] + " ")
                 self.remove_card(playable_cards[j])
             print("\n")
         else:

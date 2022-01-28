@@ -15,11 +15,9 @@
 ### These are constants for all cards and the decks for the game. ###
 ### Do not delete ###
 
-# all cards in their raw form
-ALL_COLOURS = "BGYPORM"
-ALL_NUM = "0123456789"
-PLUS_2 ="+2"
-PLUS_4 ="+4"
+# wild cards
+PLUS_2 = "+2"
+PLUS_4 = "+4"
 WILDCARDS = [PLUS_2, PLUS_4]
 
 CARDS_IN_HAND = 8

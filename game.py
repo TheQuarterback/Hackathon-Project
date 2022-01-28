@@ -11,16 +11,17 @@
 # Date (dd/mm/yyyy) of Authorship delcaration for Wei Herng Moo Yong: 16/01/2022
 ##############################################################################
 
+from pickle import TRUE
 from time import sleep
-import sys
 import threading
 from constants import CARDS_IN_HAND, INITIAL_DECK,  \
     CARDS_IN_HAND,  PLAY_DECK, DEAL, PLAY
 from random import randint
+import sys
+
 
 
 class Game:
-    
     # initialise wth a list in turn order
     def __init__(self, play_order, time_limit = 100):
         self.play_order = play_order
@@ -76,7 +77,7 @@ class Game:
     def check_winner(self, player):
         if not player.hand:
             print("WINNER!!!")
-            exit() # end the program
+            return True
 
 
 
