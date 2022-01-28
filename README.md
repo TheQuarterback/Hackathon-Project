@@ -1,7 +1,10 @@
 # Hackathon-Project by Team MelbGridiron (Trois)
 
-*Important note*:
-To start the game, download Trois.exe and run the application.
+*Important things to take note*:
+1. To start the game, download Trois.exe on a computer and run the application.
+2. "Modified Uno (Trois) Game Brochure" document has all the information you need to know about the game.
+3. Refer to the "Modified Uno (Trois) Game Components & Design" image to better understand the game and its processes.
+4. Trois is a console-based game
 
 About:
 1. It is a slightly different version of Uno:
