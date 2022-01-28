@@ -97,6 +97,10 @@ while game.time_left > 0:
 
     # if hand is empty, declare winner and exit loop
     if game.check_winner(player):
+        if current_turn == 0:
+            print(f"{player_name} IS THE WINNER!!!")
+        else:
+            print(f"BOT {current_turn} IS THE WINNER!!!")
         break
  
     # move on to next player

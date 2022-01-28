@@ -60,13 +60,11 @@ class Game:
     def random_card(cls, generate_type):
         # start of game
         if generate_type == DEAL:
-            suit = INITIAL_DECK[randint(0, len(INITIAL_DECK) - 1)]
-            card = suit[randint(0, len(suit) - 1)]
+            card = INITIAL_DECK[randint(0, len(INITIAL_DECK) - 1)]
 
         # game progresses
         elif generate_type == PLAY:
-            suit = PLAY_DECK[randint(0, len(PLAY_DECK) - 1)]
-            card = suit[randint(0, len(suit) - 1)]
+            card = INITIAL_DECK[randint(0, len(PLAY_DECK) - 1)]
 
         return card
 
@@ -75,7 +73,6 @@ class Game:
     # declares winner if empty
     def check_winner(self, player):
         if not player.hand:
-            print("WINNER!!!")
             return True
 
 
