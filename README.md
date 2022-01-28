@@ -1,7 +1,6 @@
 # Hackathon-Project by Team MelbGridiron (Trois)
 
 *Important note*:
-
 To start the game, download Trois.exe and run the application.
 
 About:
