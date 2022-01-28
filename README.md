@@ -52,9 +52,10 @@ Rules:
 7. Wildcards are to be discarded into the wildcard pile immediately after obtaining them
 8. In a play, a character can place card(s) from their hand onto the pile if they match the topmost card on the pile:
 - If there is not a single card that can be discarded from their hand onto the pile, they will have to take a card from the deck and then it will be the next character’s turn
-9. Matching card(s) is/are of the same colour or number:
+9. Matching card(s) is/are of the same colour or number, and can be played:
 - Example of same-colour combination if the topmost card on the pile is blue (B7): [B0, B3, B8], [B6]
 - Example of same-number combination if the topmost card on the pile is blue (B7): [G7, P7], [O7]
+-10. If Player isn't able to play a matching card during their turn, just press the enter key
 
 All game cards:
 - Blue: B0, B1, B2, B3, B4, B5, B6, B7, B8, B9
