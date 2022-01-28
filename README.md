@@ -1,5 +1,8 @@
 # Hackathon-Project by Team MelbGridiron (Trois)
 
+*Important note*
+To start the game, download add files and run Trois.py
+
 About:
 1. It is a slightly different version of Uno:
 - There are more card combinations
