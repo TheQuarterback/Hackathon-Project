@@ -2,7 +2,7 @@
 
 *Important note*:
 
-To start the game, download add files and run Trois.py
+To start the game, download all files and run Trois.py
 
 About:
 1. It is a slightly different version of Uno:
