@@ -43,7 +43,7 @@ class Player:
                 else:
                     self.add_card(new_card)
         elif card == PLUS_4:
-            self.remove_card(self.hand, card)
+            self.remove_card(card)
             for _ in range(3):
                 new_card = game.Game.random_card(PLAY)
                 if new_card == PLUS_2 or new_card == PLUS_4:
