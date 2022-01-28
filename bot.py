@@ -33,10 +33,6 @@ class Bot(Player):
         for card in self.hand:
             if self.check_playable(top_pile, card) == PLAYABLE:
                 playable_cards.append(card)
-        
-        # for testing - to be deleted later
-        #for k in range(playable_cards_num - 1):
-         #   print(playable_cards[k])
 
         self.declare_move(playable_cards)
         
@@ -44,11 +40,8 @@ class Bot(Player):
         # the deck. Otherwise, play the card(s) into the pile from the array
         if playable_cards:
             top_pile = playable_cards[-1]
-            #print(top_pile) # for testing - to be deleted later
             for card in playable_cards:
-                #print(playable_cards[j] + " ")
                 self.remove_card(card)
-            #print("\n")
         else:
             self.pick_card()
 
