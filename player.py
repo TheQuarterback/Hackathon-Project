@@ -1,6 +1,6 @@
 ##############################################################################
 # Trois is a modified version of the world-renowned game, Uno, that is jointly
-# developed by Anthony Lua and Wui Herng Moo Yong as part of a Hackathon
+# developed by Anthony Lua and Wei Herng Moo Yong as part of a Hackathon
 # project. Trois is a one-player game against three desicion-making bots, and
 # the goal of Trois is to get rid of all your cards before the time limit or
 # to have the least number fo cards by the time limit. Instructions on how to
