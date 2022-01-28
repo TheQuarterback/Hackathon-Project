@@ -44,7 +44,7 @@ print("Dealer has formed a pile\n")
 sleep(1)
 
 # initialise players' hand and game
-player = Player([])
+player = Player(Game.deal_cards())
 bot1 = Bot(Game.deal_cards())
 bot2 = Bot(Game.deal_cards())
 bot3 = Bot(Game.deal_cards())
