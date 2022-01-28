@@ -1,6 +1,6 @@
 # Hackathon-Project by Team MelbGridiron (Trois)
 
-*Important things to take note*:
+*Important things to take note before commencing anything*:
 1. To start the game, download Trois.exe on a computer and run the application.
 2. "Modified Uno (Trois) Game Brochure" document has all the information you need to know about the game.
 3. Refer to the "Modified Uno (Trois) Game Components & Design" image to better understand the game and its processes.
@@ -15,7 +15,6 @@ About:
 4. The game ends when a character wins by either of the following:
 - Having the least number of cards after the time limit (25 minutes) - If two or more characters have the same least number of cards, a tie will be announced
 - Having no cards left on hand
-
 
 Characters in the game:
 1. Player (Human)
@@ -33,12 +32,10 @@ Terminology:
 5. Pile: These are cards facing upwards
 6. Wildcard pile: This is where wildcards are discarded
 
-
 Play progression:
 1. The dealer opens by taking handing eight random cards (excluding wildcards) from the deck to each character
 2. The dealer then takes a card from the deck and place the card facing upwards to create a pile
 3. Afterwards, Player and the bots will play the game until one character wins
-
 
 Rules:
 1. Player always start the game
