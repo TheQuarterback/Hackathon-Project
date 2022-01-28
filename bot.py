@@ -27,13 +27,11 @@ class Bot(Player):
     # choose an optimal action and make the play
     def decide_play(self, top_pile):
         playable_cards = []
-        playable_cards_num = 0
         # check all cards on hand against the topmost card on the pile to 
         # determine if there is/are any playable card(s), and store any 
         # possible playable card(s) in an array
-        for card in range(len(self.hand)):
+        for card in self.hand:
             if self.check_playable(top_pile, card) == PLAYABLE:
-                playable_cards_num += 1
                 playable_cards.append(card)
         
         # for testing - to be deleted later
@@ -44,12 +42,12 @@ class Bot(Player):
         
         # if there are no playable card(s), then take a random card from 
         # the deck. Otherwise, play the card(s) into the pile from the array
-        if playable_cards_num >= PLAYABLE:
+        if playable_cards:
             top_pile = playable_cards[-1]
             #print(top_pile) # for testing - to be deleted later
-            for j in range(playable_cards_num - 1):
+            for card in playable_cards:
                 #print(playable_cards[j] + " ")
-                self.remove_card(playable_cards[j])
+                self.remove_card(card)
             #print("\n")
         else:
             self.pick_card()

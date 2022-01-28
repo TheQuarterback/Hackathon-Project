@@ -64,7 +64,7 @@ class Game:
 
         # game progresses
         elif generate_type == PLAY:
-            card = INITIAL_DECK[randint(0, len(PLAY_DECK) - 1)]
+            card = PLAY_DECK[randint(0, len(PLAY_DECK) - 1)]
 
         return card
 

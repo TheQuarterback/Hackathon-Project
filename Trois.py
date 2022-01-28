@@ -99,6 +99,7 @@ while game.time_left > 0:
     else:
         sleep(2)
         game.top_pile = player.decide_play(game.top_pile)
+        
 
 
     # if hand is empty, declare winner and exit loop
