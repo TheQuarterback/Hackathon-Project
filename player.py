@@ -31,12 +31,12 @@ class Player:
     
     # pick up a card from the deck
     def pick_card(self):
+        picked_cards = []
         card = game.Game.random_card(PLAY)
- 
 
         if card in INITIAL_DECK:
             self.add_card(card)
-          
+            picked_cards.append(card)
         elif card == PLUS_2:
             self.remove_card(card)
             for _ in range(2):
@@ -45,6 +45,7 @@ class Player:
                     self.remove_card(new_card)
                 else:
                     self.add_card(new_card)
+                    picked_cards.append(new_card)
         elif card == PLUS_4:
             self.remove_card(card)
             for _ in range(4):
@@ -53,7 +54,9 @@ class Player:
                     self.remove_card(new_card)
                 else:
                     self.add_card(new_card)
-
+                    picked_cards.append(new_card)
+                    
+        return picked_cards
 
     # check if card is playable - returns 1 if playable and 0 otherwise
     def check_playable(self, top_pile, current_card):
