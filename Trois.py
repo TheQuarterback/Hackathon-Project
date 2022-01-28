@@ -14,7 +14,7 @@
 ##############################################################################
 ### Libraries used for the game. Additional libraries can be added ###
 
-from constants import PLAY
+from constants import PLAY, PLUS_2, PLUS_4
 from player import Player
 from game import Game
 from time import sleep
@@ -82,8 +82,13 @@ while game.time_left > 0:
 
         # no cards to play or don't want to play card
         if not cards_to_remove:
-            print(f"d")
-            player.pick_card()  
+            picked_cards = player.pick_card() 
+            print(f"{player.username} has picked up {picked_cards[0]}")
+
+            # picked up wild card
+            if picked_cards[0] == PLUS_2 or picked_cards[0] == PLUS_4:
+                print(f"{player.username} has picked up {' '.join(picked_cards[1:])}")
+
         # update top pile card
         else:
             game.top_pile = cards_to_remove[-1]
@@ -98,10 +103,7 @@ while game.time_left > 0:
 
     # if hand is empty, declare winner and exit loop
     if game.check_winner(player):
-        if current_turn == 0:
-            print(f"{player_name} IS THE WINNER!!!")
-        else:
-            print(f"BOT {current_turn} IS THE WINNER!!!")
+        print(f"{player.username} IS THE WINNER!!!")
         break
  
     # move on to next player
