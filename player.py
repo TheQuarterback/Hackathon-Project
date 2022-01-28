@@ -36,7 +36,7 @@ class Player:
             self.add_card(card)
         elif card == PLUS_2:
             self.remove_card(card)
-            for _ in range(1):
+            for _ in range(2):
                 new_card = game.Game.random_card(PLAY)
                 if new_card == PLUS_2 or new_card == PLUS_4:
                     self.remove_card(new_card)
@@ -44,7 +44,7 @@ class Player:
                     self.add_card(new_card)
         elif card == PLUS_4:
             self.remove_card(card)
-            for _ in range(3):
+            for _ in range(4):
                 new_card = game.Game.random_card(PLAY)
                 if new_card == PLUS_2 or new_card == PLUS_4:
                     self.remove_card(new_card)
