@@ -17,8 +17,9 @@ from constants import INITIAL_DECK, PLUS_2, PLUS_4, \
 
 class Player:
 
-    def __init__(self, given_hand):
+    def __init__(self, given_hand, player_name):
         self.hand = given_hand
+        self.username = player_name
 
     # remove card from hand, returns nothing
     def remove_card(self, card):

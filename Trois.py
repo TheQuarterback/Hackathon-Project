@@ -44,10 +44,10 @@ print("Dealer has formed a pile\n")
 sleep(1)
 
 # initialise players' hand and game
-player = Player(Game.deal_cards())
-bot1 = Bot(Game.deal_cards(), 1)
-bot2 = Bot(Game.deal_cards(), 2)
-bot3 = Bot(Game.deal_cards(), 3)
+player = Player(Game.deal_cards(), player_name)
+bot1 = Bot(Game.deal_cards(), "BOT 1")
+bot2 = Bot(Game.deal_cards(), "BOT 2")
+bot3 = Bot(Game.deal_cards(), "BOT 3")
 
 play_order = [player, bot1, bot2, bot3]
 
@@ -82,6 +82,7 @@ while game.time_left > 0:
 
         # no cards to play or don't want to play card
         if not cards_to_remove:
+            print(f"d")
             player.pick_card()  
         # update top pile card
         else:

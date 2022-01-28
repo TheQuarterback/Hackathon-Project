@@ -19,13 +19,12 @@ class Bot(Player):
 
     def __init__(self, given_hand, id):
         super().__init__(given_hand)
-        self.bot_number = id
 
     def declare_move(self, play):
         if play:
-            print(f"Bot {self.bot_number} has played {' '.join(play)}")
+            print(f"Bot {self.username} has played {' '.join(play)}")
         else:
-            print(f"Bot {self.bot_number} has no card to play, so it has picked up a card.")
+            print(f"Bot {self.username} has no card to play, so it has picked up a card.")
 
 
     # choose an optimal action and make the play
