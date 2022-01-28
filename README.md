@@ -3,10 +3,11 @@
 *Important things to note before commencing anything*:
 1. Trois means three in French.
 2. To start Trois, download Trois.exe on a computer and run the application.
-3. "Modified Uno (Trois) Game Brochure" document has all the information you need to know about Trois.
-4. Refer to the "Modified Uno (Trois) Game Components & Design" image to better understand Trois and its processes.
-5. Screenshots of Trois can be found in a file above.
-6. Trois is a console-based game.
+3. If you are unable to run Trois.exe, download all the .py files and run them on an IDE (VSCode, IDLE etc)
+4. "Modified Uno (Trois) Game Brochure" document has all the information you need to know about Trois.
+5. Refer to the "Modified Uno (Trois) Game Components & Design" image to better understand Trois and its processes.
+6. Screenshots of Trois can be found in "screenshots" document.
+7. Trois is a console-based game.
 
 About:
 1. It is a slightly different version of Uno:
