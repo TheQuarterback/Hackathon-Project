@@ -31,10 +31,10 @@ class Bot(Player):
         # check all cards on hand against the topmost card on the pile to 
         # determine if there is/are any playable card(s), and store any 
         # possible playable card(s) in an array
-        for i in range(len(self.hand) - 1):
-            if self.check_playable(top_pile, self.hand[i]) == PLAYABLE:
+        for card in range(len(self.hand)):
+            if self.check_playable(top_pile, card) == PLAYABLE:
                 playable_cards_num += 1
-                playable_cards.append(self.hand[i])
+                playable_cards.append(card)
         
         # for testing - to be deleted later
         #for k in range(playable_cards_num - 1):
