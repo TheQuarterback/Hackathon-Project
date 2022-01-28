@@ -55,7 +55,7 @@ Rules:
 9. Matching card(s) is/are of the same colour or number, and can be played:
 - Example of same-colour combination if the topmost card on the pile is blue (B7): [B0, B3, B8], [B6]
 - Example of same-number combination if the topmost card on the pile is blue (B7): [G7, P7], [O7]
--10. If Player isn't able to play a matching card during their turn, just press the enter key
+10. If Player isn't able to play a matching card during their turn, just press the enter key
 
 All game cards:
 - Blue: B0, B1, B2, B3, B4, B5, B6, B7, B8, B9
