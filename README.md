@@ -73,3 +73,5 @@ All game cards:
 - Wildcards: +2, +4
 
 Screenshots:
+
+<img width="979" alt="1" src="https://user-images.githubusercontent.com/94183388/151545045-209f4da0-4461-4986-971b-451e5fbc33a4.PNG">
