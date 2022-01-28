@@ -1,10 +1,11 @@
 # Hackathon-Project by Team MelbGridiron (Trois)
 
 *Important things to note before commencing anything*:
-1. To start Trois, download Trois.exe on a computer and run the application.
-2. "Modified Uno (Trois) Game Brochure" document has all the information you need to know about Trois.
-3. Refer to the "Modified Uno (Trois) Game Components & Design" image to better understand Trois and its processes.
-4. Trois is a console-based game
+1. Trois means three in French.
+2. To start Trois, download Trois.exe on a computer and run the application.
+3. "Modified Uno (Trois) Game Brochure" document has all the information you need to know about Trois.
+4. Refer to the "Modified Uno (Trois) Game Components & Design" image to better understand Trois and its processes.
+5. Trois is a console-based game.
 
 About:
 1. It is a slightly different version of Uno:
