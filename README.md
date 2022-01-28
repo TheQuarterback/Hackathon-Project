@@ -71,7 +71,3 @@ All game cards:
 - Magenta: M0, M1, M2, M3, M4, M5, M6, M7, M8, M9
 
 - Wildcards: +2, +4
-
-Screenshots:
-
-<img width="979" alt="1" src="https://user-images.githubusercontent.com/94183388/151545045-209f4da0-4461-4986-971b-451e5fbc33a4.PNG">
