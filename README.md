@@ -5,7 +5,8 @@
 2. To start Trois, download Trois.exe on a computer and run the application.
 3. "Modified Uno (Trois) Game Brochure" document has all the information you need to know about Trois.
 4. Refer to the "Modified Uno (Trois) Game Components & Design" image to better understand Trois and its processes.
-5. Trois is a console-based game.
+5. Screenshots of Trois can be found in a file above.
+6. Trois is a console-based game.
 
 About:
 1. It is a slightly different version of Uno:
