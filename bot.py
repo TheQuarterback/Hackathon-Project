@@ -40,7 +40,7 @@ class Bot(Player):
             for j in range(playable_cards_num - 1):
                 #print(playable_cards[j] + " ")
                 self.remove_card(playable_cards[j])
-            print("\n")
+            #print("\n")
         else:
             self.pick_card()
 
