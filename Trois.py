@@ -27,31 +27,31 @@ import sys
 # Here is where the Trois is played.
 ##############################################################################
 # start thegame with simple introductory proses and courtesy
-print("Welcome to Trois! A lovely and great game for bored people!\n")
+print("Welcome to Trois! A lovely and great game for bored people!")
 sleep(1)
 print("If this is your first time playing Trois, we recommend reading the",
-      "game brochure before starting!\n")
+      "game brochure before starting!")
 sleep(1)
 player_name = str(input("Enter your name/username: "))
-print("\nGreetings, " + player_name + "!\n")
-print("Bot 1, Bot 2, Bot 3 has joined the game\n")
+print("Greetings, " + player_name + "!")
+print("Bot 1, Bot 2, Bot 3 has joined the game")
 sleep(1)
-print("Dealer has shuffled and distributed the cards to all players\n")
+print("Dealer has shuffled and distributed the cards to all players")
 sleep(1)
-print("Dealer has formed the deck\n")
+print("Dealer has formed the deck")
 sleep(1)
 print("Dealer has formed a pile\n")
 sleep(1)
 
 # initialise players' hand and game
 player = Player(Game.deal_cards())
-bot1 = Bot(Game.deal_cards())
-bot2 = Bot(Game.deal_cards())
-bot3 = Bot(Game.deal_cards())
+bot1 = Bot(Game.deal_cards(), 1)
+bot2 = Bot(Game.deal_cards(), 2)
+bot3 = Bot(Game.deal_cards(), 3)
 
 play_order = [player, bot1, bot2, bot3]
 
-game = Game(play_order, 50) # initialize game with play order and duration
+game = Game(play_order, 25) # initialize game with play order and duration in minutes
 
 current_turn = 0
 
@@ -80,7 +80,7 @@ while game.time_left > 0:
             if player.check_playable(game.top_pile, card):
                 cards_to_remove.append(card)
 
-        # no cards to play
+        # no cards to play or don't want to play card
         if not cards_to_remove:
             player.pick_card()  
         # update top pile card

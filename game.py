@@ -20,13 +20,12 @@ from random import randint
 import sys
 
 
-
 class Game:
     # initialise wth a list in turn order
-    def __init__(self, play_order, time_limit = 100):
+    def __init__(self, play_order, time_limit = 25):
         self.play_order = play_order
         self.top_pile = Game.random_card(DEAL)
-        self.time_left = time_limit
+        self.time_left = time_limit * 60
 
     # start timer
     def start_timer(self):

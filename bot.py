@@ -13,8 +13,20 @@
 
 from player import Player
 from constants import PLAYABLE, NOT_PLAYABLE
+from game import Game
 
 class Bot(Player):
+
+    def __init__(self, given_hand, id):
+        super().__init__(given_hand)
+        self.bot_number = id
+
+    def declare_move(self, play):
+        if play:
+            print(f"Bot {self.bot_number} has played {' '.join(play)}")
+        else:
+            print(f"Bot {self.bot_number} has no card to play, so it has picked up a card.")
+
 
     # choose an optimal action and make the play
     def decide_play(self, top_pile):
@@ -31,6 +43,8 @@ class Bot(Player):
         # for testing - to be deleted later
         #for k in range(playable_cards_num - 1):
          #   print(playable_cards[k])
+
+        self.declare_move(playable_cards)
         
         # if there are no playable card(s), then take a random card from 
         # the deck. Otherwise, play the card(s) into the pile from the array

@@ -12,7 +12,7 @@
 ##############################################################################
 
 import game
-from constants import INITIAL_DECK, PLAY_DECK, PLUS_2, PLUS_4, PLAY_DECK, \
+from constants import INITIAL_DECK, PLUS_2, PLUS_4, \
     PLAYABLE, NOT_PLAYABLE, DEAL, PLAY
 
 class Player:
