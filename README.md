@@ -1,6 +1,7 @@
 # Hackathon-Project by Team MelbGridiron (Trois)
 
-*Important note*
+*Important note*:
+
 To start the game, download add files and run Trois.py
 
 About:
